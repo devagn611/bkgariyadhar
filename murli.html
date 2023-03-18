@@ -172,8 +172,8 @@
             <div class="entry_point">
                 <p style="text-align:center; color:black; font-size: 20px;">Daily Murli (Controls) </p>
                 <form action="" id="myForm" style="text-align: center; margin:2%;">
-                    <input type="date" id="date">
-                    <input class="i1" type="submit" value="Show Or બતાવો" id="submit" style="border-radius: 6px; background-color:white; display: none" />
+                    <input type="date" id="date" class="i1">
+                    <input type="submit" value="Show Or બતાવો" id="submit" style="border-radius: 6px; background-color:white; display: none" />
                     <select name="language" id="lan">
                         <option value="gu">ગુજરાતી</option>
                         <option value="hi">Hindi</option>
@@ -257,6 +257,9 @@
             window.onload = function() {
                 document.getElementById("submit").click();
             };
+            $(".i1").change(function() {
+                document.getElementById("submit").click();
+            });
             $("#lan").change(function() {
                 document.getElementById("submit").click();
             });
